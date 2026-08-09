@@ -1,0 +1,11 @@
+Install uvicorn
+
+- Then psycopg2binary, sqlalchemy, 
+
+- pgadmin for viewing
+
+for frontend:
+
+- install via: npm install
+- start with: npm start
+
