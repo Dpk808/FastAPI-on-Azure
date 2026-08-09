@@ -1,7 +1,11 @@
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine 
+from sqlalchemy import create_engine
+import os
 
-db_url = "postgresql://deepakyadav:12345@localhost:5432/deepak"
+db_url = os.environ.get(
+    "DATABASE_URL",
+    "postgresql://postgres:Password1@fastapi-inventory-pg.postgres.database.azure.com:5432/fastapi-pg?sslmode=require"
+)
 
 engine = create_engine(db_url)
 
