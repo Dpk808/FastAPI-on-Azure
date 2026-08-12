@@ -1,14 +1,9 @@
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
-import os
+from sqlalchemy import create_engine 
 
-db_url = os.environ.get(
-    "DATABASE_URL",
-    "postgresql://postgres:Password1@fastapi-inventory-pg.postgres.database.azure.com:5432/fastapi-pg?sslmode=require"
-)
+# db_url = "postgresql://deepakyadav:12345@localhost:5432/deepak"
+db_url = "postgresql://postgres:password@db:5432/fastapi"
 
 engine = create_engine(db_url)
 
 session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-# changes to the requirements.txt 2 3 
